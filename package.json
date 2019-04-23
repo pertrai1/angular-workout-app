@@ -4,8 +4,8 @@
   "author": "Ultimate Angular",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p",
-    "build:dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "build": "cross-env NODE_ENV=production && npx webpack -p",
+    "build:dev": "cross-env NODE_ENV=development && npx webpack-dev-server --inline --hot",
     "build:production": "npm run clean && npm run build",
     "clean": "rimraf build",
     "start": "npm run build:dev"
