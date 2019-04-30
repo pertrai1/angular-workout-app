@@ -3,6 +3,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import 'rxjs/add/operator/do';
 
 import { Store } from 'store';
+import { Observable } from 'rxjs';
 
 export interface User {
   email: string,
@@ -29,6 +30,10 @@ export class AuthService {
     private af: AngularFireAuth,
     private store: Store
   ) {}
+
+  get authState() {
+    return this.af.authState;
+  }
 
   createUser(email: string, password: string) {
     return this.af.auth.createUserWithEmailAndPassword(email, password);
