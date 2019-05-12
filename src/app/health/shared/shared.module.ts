@@ -7,6 +7,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ListItemComponent } from './components/list-item/list-item.component';
 
 import { MealsService } from './services/meals/meals.service';
+import { ScheduleService } from './services/schedule/schedule.service';
 import { WorkoutsService } from './services/workouts/workouts.service';
 
 import { JoinPipe } from './pipes/join.pipe';
@@ -35,6 +36,7 @@ export class SharedModule {
 			ngModule: SharedModule,
 			providers: [
         MealsService,
+        ScheduleService,
         WorkoutsService
       ]
 		};
